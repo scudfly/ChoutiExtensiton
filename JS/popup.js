@@ -1,4 +1,8 @@
+var extensitonUrl;
+
 $(document).ready(function() {
+	
+	extensitonUrl = window.location.href.replace("/popup.html", "");
 	
 	loginCheck();
 	
@@ -84,7 +88,7 @@ function requestTopTen(){
 
 			$("a").attr("target", "_blank").each(function(i) {
 				if(this.href.indexOf('chrome-extension') >= 0) {
-					this.href = this.href.replace("chrome-extension://lionghhbaeemjhkeingcnmlkagganedi", "https://dig.chouti.com");
+					this.href = this.href.replace(extensitonUrl, "https://dig.chouti.com");
 				}
 				if(this.href.indexOf('javascript') >= 0) {
 					$(this).removeAttr("href");
@@ -215,7 +219,7 @@ function showCommentsTop(linkId, hui) {
 
 				$("a").attr("target", "_blank").each(function(i) {
 					if(this.href.indexOf('chrome-extension') >= 0) {
-						this.href = this.href.replace("chrome-extension://lionghhbaeemjhkeingcnmlkagganedi", "https://dig.chouti.com");
+						this.href = this.href.replace(extensitonUrl, "https://dig.chouti.com");
 					}
 					if(this.href.indexOf('javascript') >= 0) {
 						$(this).removeAttr("href")
