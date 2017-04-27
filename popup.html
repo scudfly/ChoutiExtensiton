@@ -1,0 +1,209 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="comment.css" type="text/css" />
+		<script type="text/javascript" src="JS/jquery-3.1.1.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="JS/compressor.js" tcharset="utf-8"></script>
+		<script type="text/javascript" src="JS/compressor2.js" charset="utf-8"></script>
+		<script type="text/javascript" src="JS/popup.js" charset="utf-8"></script>
+		<style>
+			.item {
+				width: 510px;
+				height: auto;
+				float: left;
+				/*padding-bottom: 10px;
+				  padding-top: 10px;*/
+				border-bottom: 1px solid #dce7f4;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			
+			.news-pic {
+				float: right;
+				width: 65px;
+			}
+			
+			.news-content {
+				float: left;
+				width: 435px;
+			}
+			
+			.part2 {
+				margin-top: 8px;
+				margin-bottom: 5px;
+			}
+			
+			.content-list .item .news-pic img {
+				width: 60px;
+				height: 60px;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				padding: 1px;
+				vertical-align: top;
+			}
+			
+			.content-list .item .news-content .part2 a.discus-a:hover .icon-discus {
+				background-position: 0 -60px;
+			}
+			
+			.content-list .item .news-content .part2 .icon-discus {
+				background-position: 0 -100px;
+				width: 18px;
+				height: 18px;
+				vertical-align: -1px;
+				margin-right: 2px;
+			}
+			
+			.hand-icon {
+				background: url("/icon_18_118.png") no-repeat scroll 0 0 transparent;
+			}
+			
+			.content-list .item .news-content .part2 .digg-a,
+			.content-list .item .news-content .part2 .isVoted,
+			.content-list .item .news-content .part2 .discus-a {
+				min-width: 54px;
+			}
+			
+			.content-list .item .news-content .part2 .discus-a b {
+				padding-right: 3px;
+				color: #99aecb;
+				font-size: 14px;
+				font-weight: bold;
+				vertical-align: 4px;
+				_vertical-align: 2px;
+			}
+			
+			.content-list .item .news-content .part2 span,
+			.content-list .item .news-content .part2 a {
+				display: inline-block;
+			}
+			
+			.user-a {
+				margin-right: 15px;
+			}
+			
+			ul,
+			li {
+				list-style-type: none;
+			}
+			
+			.user-a span img {
+				background-color: #FFFFFF;
+				border: 1px solid #CCCCCC;
+				padding: 1px;
+				margin-top: 0px;
+			}
+			
+			.comment-line-top .comment-state .ding,
+			.comment-line-top .comment-state .cai {
+				margin-right: 4px;
+				margin-left: 4px;
+			}
+			/*.comment-line-top{
+				width: 80px;
+			}*/
+			
+			.comment-list-top-2 .items {
+				padding-left: 0px;
+			}
+			
+			.treeview ul {
+				margin-left: -40px;
+			}
+			/*.comment-L-top, .comment-L{
+			    margin-top: 0px  !important; 
+			}*/
+			/*.treeview li {
+			  background: url(http://dig.chouti.com/images/pinglun_line.gif?v=2.7) 0 0 no-repeat;
+			    padding-left: 20px;
+			}*/
+			
+			.treeview ul {
+				background: transparent url(pinglun_line.gif) no-repeat scroll 0px 1px;
+			}
+			
+			.treeview li {
+				background: transparent url(pinglun_line.gif) no-repeat scroll 0px -1773px;
+				padding-left: 20px;
+			}
+			
+			.content-source {
+				padding-right: 10px;
+			}
+			
+			.news-content {
+				float: left;
+				width: 430px;
+			}
+			
+			.content-list .item .news-content .part1 .show-content,
+			.content-list .item .news-content .part1 .show-content-grey {
+				font-size: 13px;
+				color: #369;
+				font-weight: 700;
+			}
+			
+			.comment-box {
+				width: 477px;
+			}
+			
+			.comment-box-area .close-comt {
+				right: -63px;
+			}
+			
+			.content-list .item .news-content .part2 b {
+				margin-left: 3px;
+			}
+			
+			.discus-a {
+				margin-right: 8px;
+			}
+			
+			a {
+				cursor: hand;
+			}
+			/*li.last span.folder .comment-L {
+			    margin-top: 4px;
+			}*/
+			/*.comment-L-top {
+			    margin-top: 4px;
+			}
+			
+			.treeview li.last {
+			    background-position: 0px -1763px;
+			}
+			
+			.filetree span.file, .filetree span.folder {
+			    background-position: 3px 11px;
+			}*/
+			/*.treeview li.lastCollapsable {
+			    padding-top: 7px;
+			}*/
+			
+
+
+  
+    #content-list::-webkit-scrollbar {
+        width:5px;
+    }
+
+
+    #content-list::-webkit-scrollbar-thumb{
+        background:#c1c1c1;
+        border-radius:4px;
+    }
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class="content-list" id="content-list" style="width: 522px; padding-left: 10px; overflow-y: auto; overflow-x: hidden; height:600px; margin-right: 2px;">
+			<div id="loadMsg" style="padding-left: 200px; padding-top: 270px;"><img src="images/pinglun_loading.gif" style="vertical-align: middle;"/>&nbsp;加载中，请稍候...</div>
+		</div>
+	</body>
+</html>
