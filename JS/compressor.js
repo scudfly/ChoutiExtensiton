@@ -7824,7 +7824,7 @@ jQuery.cookie = function(name, value, options) {
 			$bigImg.css({
 				position: "absolute",
 				top: ($img.offset().top) + "px",
-				right: (docWidth - $img.offset().left - 64) + "px",
+				right: (docWidth - $img.offset().left - 81) + "px",
 				"z-index": 2,
 				"background-color": "#fff",
 				border: "1px solid #ccc",
