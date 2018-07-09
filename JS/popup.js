@@ -7,6 +7,10 @@ $(document).ready(function() {
 	loginCheck();
 	
 	requestTopTen();
+	
+	$("#content-list").scroll(function() {
+	  $(".big-img").remove();
+	});
 })
 
 function loginCheck(){
