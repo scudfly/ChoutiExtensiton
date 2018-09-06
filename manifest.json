@@ -17,5 +17,5 @@
       "16": "chouti121.png",
       "48": "chouti121.png"
    },
-    "content_security_policy": "script-src 'unsafe-eval'; object-src 'self'"
+    "content_security_policy": "script-src 'unsafe-eval' object-src 'self'"
 }
