@@ -7809,8 +7809,8 @@ jQuery.cookie = function(name, value, options) {
 			var imgUrl = $img.attr("original") + "";
 			bigImgUrl = imgUrl.substring(0, imgUrl.lastIndexOf("=")) + "=C200x200" + imgUrl.substring(imgUrl.lastIndexOf("."), imgUrl.length);
 			var str = "<img class='big-img' id='bigImg" + id + "' width='200px' height='200px' src='" + imgUrl + "' alt='抽屉新热榜' />";
-			$(document.body).append(str);
-			var $bigImg = $("#bigImg" + id);
+			
+			var $bigImg = $(str);
 			docWidth = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
 			$bigImg.hover(function() {
 				var prefix = chouti.prefix();
@@ -7824,7 +7824,7 @@ jQuery.cookie = function(name, value, options) {
 			$bigImg.css({
 				position: "absolute",
 				top: ($img.offset().top) + "px",
-				right: (docWidth - $img.offset().left - 81) + "px",
+				right: (docWidth - $img.offset().left - 64) + "px",
 				"z-index": 2,
 				"background-color": "#fff",
 				border: "1px solid #ccc",
@@ -7835,6 +7835,9 @@ jQuery.cookie = function(name, value, options) {
 				width: "60px",
 				height: "60px"
 			});
+			
+			$(document.body).append($bigImg);
+			
 			var bigImgOb = new Image();
 			bigImgOb.src = bigImgUrl;
 			if (bigImgOb.width > 0) {
