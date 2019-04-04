@@ -3,19 +3,19 @@
 	"version": "3.0.0",
 	"manifest_version": 2,
 	"browser_action": {
-	    "default_icon": "chouti16.png",
-	    "default_title": "抽屉新热榜",
-	    "default_popup": "popup.html"
+		"default_icon": "chouti16.png",
+		"default_title": "抽屉新热榜",
+		"default_popup": "popup.html"
 	},
 	"options_page": "options.html",
 	"permissions": [
 		"http://*/",
-        "https://*/"  
-    ],
+		"https://*/"
+	],
 	"icons": {
-      "128": "chouti121.png",
-      "16": "chouti121.png",
-      "48": "chouti121.png"
-   },
-    "content_security_policy": "script-src 'unsafe-eval' object-src 'self'"
+		"128": "chouti121.png",
+		"16": "chouti121.png",
+		"48": "chouti121.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

@@ -4973,7 +4973,7 @@
 		},
 		getImgPath: function(src) {
 			if (src) {
-				var url = "http://img.labi.com",
+				var url = "https://img.labi.com",
 					relative, absolute, defaultPath = DEFAULT_USER_IMAGE_PATH;
 				if (src.indexOf(defaultPath) == 0) {
 					absolute = src;
@@ -5114,10 +5114,10 @@
 			image = $('<img src="" />').attr({
 				id: "H-ava-upload"
 			}).css("display", "none").appendTo(imageContainer),
-			imageDefault = $('<img src="http://dig.chouti.com/image/upload-default.png" />').addClass("upload-image-default").attr({
+			imageDefault = $('<img src="https://dig.chouti.com/image/upload-default.png" />').addClass("upload-image-default").attr({
 				id: "H-upload-image-default"
 			}).appendTo(imageContainer),
-			imageLoading = $('<img src="http://dig.chouti.com/image/upload-loading.gif" />').addClass("upload-image-loading").attr({
+			imageLoading = $('<img src="https://dig.chouti.com/image/upload-loading.gif" />').addClass("upload-image-loading").attr({
 				id: "H-upload-ava-loading"
 			}).appendTo(imageContainer),
 			tips2 = $("<div></div>").addClass("picture-dialog-content-uploadtips").text(i18nAvaUpload.tips).appendTo(td2),
@@ -5605,7 +5605,7 @@
 						}).appendTo(buttonContainer)
 					}
 				});
-				var loadImage = $('<img src="http://dig.chouti.com/' + parent.DEFAULT_SYSTEM_IMAGE_PATH + 'loading_16_16.gif" />').addClass("sms-send-load-img").appendTo(buttonContainer)
+				var loadImage = $('<img src="https://dig.chouti.com/' + parent.DEFAULT_SYSTEM_IMAGE_PATH + 'loading_16_16.gif" />').addClass("sms-send-load-img").appendTo(buttonContainer)
 			} else {
 				$.each(buttons, function(name, fn) {
 					var button;
@@ -6246,7 +6246,7 @@ jQuery.cookie = function(name, value, options) {
 				
 				var id = $this.siblings().filter("input:hidden").val()
 				
-				var submitUrl = "http://dig.chouti.com/comments/vote";
+				var submitUrl = "https://dig.chouti.com/comments/vote";
 				var options = {
 					url: submitUrl,
 					type: "POST",
@@ -6491,7 +6491,7 @@ jQuery.cookie = function(name, value, options) {
 			var $parNode = $shaIco.parent().parent().parent(".part2");
 			var title = $parNode.attr("share-title");
 			var linksId = $parNode.attr("share-linkid");
-			var url = "http://" + window.location.host + "/link/" + linksId;
+			var url = "https://" + window.location.host + "/link/" + linksId;
 			var pic = $parNode.attr("share-pic");
 			var summary = $parNode.attr("share-summary");
 			var subject = $parNode.attr("share-subject");
@@ -6520,7 +6520,7 @@ jQuery.cookie = function(name, value, options) {
 			for (var p in param) {
 				temp.push(p + "=" + encodeURIComponent(param[p] || ""))
 			}
-			var _u = "http://service.weibo.com/share/share.php?" + temp.join("&");
+			var _u = "https://service.weibo.com/share/share.php?" + temp.join("&");
 			window.open(_u, "", "width=700, height=480, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no")
 		},
 		shareToDouban: function(title, url, pic, text) {
@@ -7156,7 +7156,7 @@ jQuery.cookie = function(name, value, options) {
 						if (!chouti.isVideoUrl(url)) {
 							url = flashUrl
 						}
-						url = "http://" + window.location.host + "/link/videoinfo.do?url=" + encodeURIComponent(url) + "&t=" + Math.random();
+						url = "https://" + window.location.host + "/link/videoinfo.do?url=" + encodeURIComponent(url) + "&t=" + Math.random();
 						xmlhttp.onreadystatechange = function() {
 							if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 								$("#loadingF" + id).remove();
@@ -7231,7 +7231,7 @@ jQuery.cookie = function(name, value, options) {
 			$("a.collect-a").unbind().bind("click", function(e) {
 				var $obj = $(this);
 				var id = $obj.attr("lang");
-				var submitUrl = "http://dig.chouti.com/link/self/add?" + G.param({
+				var submitUrl = "https://dig.chouti.com/link/self/add?" + G.param({
 					linksId: id
 				});
 				var $pare = $obj.parent().parent().parent();
@@ -7252,7 +7252,7 @@ jQuery.cookie = function(name, value, options) {
 						if (info.code == ResultCodeSuccess) {
 							var ju = parseInt($($obj).parent().css("padding-top").replace("px", ""));
 							var $span = $("<img>", {
-								src: "http://dig.chouti.com//images/add-save.gif?v=2.13"
+								src: "https://dig.chouti.com//images/add-save.gif?v=2.13"
 							}).css({
 								top: parseInt($($obj).parent().position().top + ju - 25) + "px",
 								left: parseInt($($obj).position().left - 9) + "px"
@@ -7289,7 +7289,7 @@ jQuery.cookie = function(name, value, options) {
 			$("a.remove-col-a, a.del-coll-btn").unbind().bind("click", function(e) {
 				var $obj = $(this);
 				var id = $obj.attr("lang");
-				var submitUrl = "http://dig.chouti.com/link/self/del?" + G.param({
+				var submitUrl = "https://dig.chouti.com/link/self/del?" + G.param({
 					linksId: id
 				});
 				var $pare = $obj.parent().parent().parent();
@@ -7313,7 +7313,7 @@ jQuery.cookie = function(name, value, options) {
 							var ju = parseInt($($obj).parent().css("padding-top").replace("px", ""));
 							if ($obj.hasClass("remove-col-a")) {
 								var $span = $("<img>", {
-									src: "http://dig.chouti.com/images/del-save.gif?v=2.13"
+									src: "https://dig.chouti.com/images/del-save.gif?v=2.13"
 								}).css({
 									top: parseInt($($obj).parent().position().top + ju - 25) + "px",
 									left: parseInt($($obj).position().left - 9) + "px"
@@ -7360,7 +7360,7 @@ jQuery.cookie = function(name, value, options) {
 					$obj.before(temp_digg_a);
 					var $pare = $obj.parent().parent().parent();
 					var id = $obj.children("i").html();
-					var submitUrl = "http://dig.chouti.com/link/vote?" + G.param({
+					var submitUrl = "https://dig.chouti.com/link/vote?" + G.param({
 						linksId: id
 					});
 					var options = {
@@ -7432,7 +7432,7 @@ jQuery.cookie = function(name, value, options) {
 				$obj.before(temp_digg_a);
 				var $pare = $obj.parent().parent().parent();
 				var id = $obj.children("i").html();
-				var submitUrl = "http://dig.chouti.com/vote/cancel/vote.do";
+				var submitUrl = "https://dig.chouti.com/vote/cancel/vote.do";
 				var options = {
 					url: submitUrl,
 					type: "POST",
@@ -7850,7 +7850,7 @@ jQuery.cookie = function(name, value, options) {
 				if (bigImgOb.width > 0) {
 					$bigImg.attr("src", bigImgUrl)
 				} else {
-					var str = "<img class='big-img-load' id='bigImgLoading" + id + "' width='16px' height='16px' src='http://dig.chouti.com/images/loading.gif'/>";
+					var str = "<img class='big-img-load' id='bigImgLoading" + id + "' width='16px' height='16px' src='https://dig.chouti.com/images/loading.gif'/>";
 					$(document.body).append(str);
 					$("#bigImgLoading" + id).css({
 						position: "absolute",
@@ -10074,7 +10074,7 @@ if (!Renren.share) {
 			return Math.ceil(str.length / 2)
 		};
 		var cssImport = function() {
-			var static_url = "http://xnimg.cn/xnapp/share/css/v2/rrshare.css";
+			var static_url = "https://xnimg.cn/xnapp/share/css/v2/rrshare.css";
 			var b = document.createElement("link");
 			b.rel = "stylesheet";
 			b.type = "text/css";
@@ -10188,7 +10188,7 @@ if (!Renren.share) {
 			return param
 		};
 		var onclick = function(data) {
-			var submitUrl = "http://widget.renren.com/dialog/share";
+			var submitUrl = "https://widget.renren.com/dialog/share";
 			var p = getParam(data);
 			var prm = [];
 			for (var i in p) {
